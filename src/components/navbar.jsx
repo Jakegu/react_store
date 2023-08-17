@@ -26,16 +26,19 @@ function Navbar() {
               Home
             </Link>
           </li>
+
           <li className="nav-item active">
             <Link className="nav-link" to="/catalog">
               Catalog
             </Link>
           </li>
+
           <li className="nav-item active">
             <Link className="nav-link" to="/about">
               About
             </Link>
           </li>
+
           <li className="nav-item active">
             <Link className="nav-link" to="/admin">
               Admin
