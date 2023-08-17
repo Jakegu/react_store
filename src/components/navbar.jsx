@@ -4,52 +4,53 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">
-        Tritone
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </li>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="#">
+          Tritone
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/catalog">
+                Catalog
+              </Link>
+            </li>
 
-          <li className="nav-item active">
-            <Link className="nav-link" to="/catalog">
-              Catalog
-            </Link>
-          </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/admin">
+                Admin
+              </Link>
+            </li>
 
-          <li className="nav-item active">
-            <Link className="nav-link" to="/about">
-              About
+            <li className="nav-item">
+              <Link className="nav-link active" to="/about">
+                About Me
+              </Link>
+            </li>
+          </ul>
+          <form className="d-flex" role="search">
+            <Link className="btn btn-outline-success" to="/cart">
+              Cart
             </Link>
-          </li>
-
-          <li className="nav-item active">
-            <Link className="nav-link" to="/admin">
-              Admin
-            </Link>
-          </li>
-        </ul>
-        <form className="form-inline my-2 my-lg-0">
-          <Link className="btn btn-outline-success my-2 my-sm-0" to="/cart">
-            Cart
-          </Link>
-        </form>
+          </form>
+        </div>
       </div>
     </nav>
   );
