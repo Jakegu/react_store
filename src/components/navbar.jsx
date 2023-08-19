@@ -2,9 +2,15 @@ import "./navbar.css";
 
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import DataContext from "../store/dataContext";
+
 function Navbar() {
+  const user = useContext(DataContext).user;
+  const cart = useContext(DataContext).cart;
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="#">
           Tritone
@@ -46,8 +52,14 @@ function Navbar() {
             </li>
           </ul>
           <form className="d-flex" role="search">
+            <div className="user-info">
+              <i className="fa-solid fa-circle-user"></i>
+              <label>{user.name}</label>
+            </div>
+
             <Link className="btn btn-outline-success" to="/cart">
-              Cart
+              {cart.length}
+              <i className="fa-solid fa-cart-shopping"></i>
             </Link>
           </form>
         </div>
