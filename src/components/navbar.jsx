@@ -57,7 +57,7 @@ function Navbar() {
               <label>{user.name}</label>
             </div>
 
-            <Link className="btn btn-outline-success" to="/cart">
+            <Link className="btn btn-outline-success btn-cart" to="/cart">
               {cart.length}
               <i className="fa-solid fa-cart-shopping"></i>
             </Link>
