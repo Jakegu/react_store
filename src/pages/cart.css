@@ -7,3 +7,15 @@
   text-align: center;
   color: rgb(76, 63, 88);
 }
+
+.cart .parent {
+  display: flex;
+}
+
+.cart .parent .list {
+  flex: 3;
+}
+
+.cart .parent .list {
+  flex: 1;
+}

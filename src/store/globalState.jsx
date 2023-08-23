@@ -11,7 +11,21 @@ function GlobalState(props) {
 
   function addToCart(prod) {
     let copy = [...cart];
-    copy.push(prod);
+
+    let found = false;
+
+    for (let i = 0; i < copy.length; i++) {
+      let prodInCart = copy[i];
+      if (prod.id === prodInCart.id) {
+        prodInCart.quantity += prod.quantity;
+        found = true;
+      }
+    }
+
+    if (!found) {
+      copy.push(prod);
+    }
+
     setCart(copy);
   }
   function removeFromCart() {
