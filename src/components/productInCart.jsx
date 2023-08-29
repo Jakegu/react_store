@@ -11,7 +11,7 @@ function ProductInCart(props) {
       <img src={"/images/" + props.data.image} alt=""></img>
       <div className="title">
         <h5>{props.data.title}</h5>
-        <h6>{props.data.category}</h6>
+        <h6>{props.data.category.toUpperCase()}</h6>
       </div>
       <label>${props.data.price.toFixed(2)}</label>
       <label>{props.data.quantity}</label>

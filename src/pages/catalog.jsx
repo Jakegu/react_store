@@ -13,12 +13,12 @@ function Catalog() {
     loadCatalog();
   }, []);
 
-  function loadCatalog() {
+  async function loadCatalog() {
     let service = new DataService();
-    let prods = service.getProduct();
+    let prods = await service.getProduct();
     console.log(prods);
     setProduct(prods);
-    let cats = ["fruit", "berry", "exoticFruit"];
+    let cats = await service.getCategories();
     setCategories(cats);
     setProdsToDisplay(prods);
   }
